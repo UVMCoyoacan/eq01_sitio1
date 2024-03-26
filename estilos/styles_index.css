@@ -1,7 +1,8 @@
 /* Set the background color of the page */
-body {
-    background-color: #fff;
-  }
+body{
+    background-image: url("../ims/fondo_main.png");
+    background-color: rgba(255, 255, 255, 0.5);
+}
   
   /* Style the header */
   header {
@@ -12,7 +13,7 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-  
+
   /* Style the logo */
   .logo {
     width: 100px;
