@@ -3,16 +3,7 @@ body{
      background-color: white;
 }
 
-.image-section {
-    height: 100%; /* Set the height to the same value as the header */
-    overflow: hidden; /* Hide any overflow */
-  }
-  
-  .image-section img {
-    width: 100%; /* Set the width to 100% of the containing element */
-    height: 100%; /* Set the height to 100% of the containing element */
-    object-fit: cover; /* Scale the image to fill the containing element while maintaining aspect ratio */
-  }
+
 
 /* Style the header */
  header {
@@ -63,7 +54,11 @@ body{
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 40px;
-    background-color: #ccc;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    animation: fade-in 2s forwards;
+
 }
 
 .big-white-text {
@@ -72,27 +67,65 @@ body{
     text-align: center;
   }
 
+  .image-section {
+    height: auto;
+    background-color: white;
+    overflow: hidden;
+  }
+  
+  .image-section img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .plan-a {
-    background-image: url("../ims/wispPlanA.png");
+    background-image: url("../ims/Wisp/wispPlanA.png");
     background-size: cover;
     background-position: center;
     height: 300px;
   }
 
   .plan-b {
-    background-image: url("../ims/wispPlanB.png");
+    background-image: url("../ims/Wisp/wispPlanB.png");
     background-size: cover;
     background-position: center;
     height: 300px;
   }
 
   .plan-c {
-    background-image: url("../ims/wispPlanC.png");
+    background-image: url("../ims/Wisp/wispPlanC.png");
     background-size: cover;
     background-position: center;
     height: 300px;
   }
+ 
+  @keyframes fade-in {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+    }
 
+    .grid.animate {
+  animation: fade-in 1s forwards;
+    }
+
+    .publicidad{
+        align-items: center;
+        height: 300px; /* Set a fixed height for the container */
+        width: 100%;
+    }
+
+    .publicidad img{
+        display: block;
+        margin: 0 auto; /* Center the images */
+        width: 70%; /* Set a width for the images */
+        height: auto;
+    }
 
   /* Style the footer */ 
 footer {
