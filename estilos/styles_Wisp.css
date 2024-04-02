@@ -1,0 +1,106 @@
+
+body{
+     background-color: white;
+}
+
+.image-section {
+    height: 100%; /* Set the height to the same value as the header */
+    overflow: hidden; /* Hide any overflow */
+  }
+  
+  .image-section img {
+    width: 100%; /* Set the width to 100% of the containing element */
+    height: 100%; /* Set the height to 100% of the containing element */
+    object-fit: cover; /* Scale the image to fill the containing element while maintaining aspect ratio */
+  }
+
+/* Style the header */
+ header {
+    background-color: #FFD700;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+  }
+
+  /* Style the logo */
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Style the nav */
+  nav {
+    display: flex;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+  }
+
+  nav a:hover {
+    color: #007bff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+    background-color: #ccc;
+}
+
+.big-white-text {
+    color: black;
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .plan-a {
+    background-image: url("../ims/wispPlanA.png");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+  }
+
+  .plan-b {
+    background-image: url("../ims/wispPlanB.png");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+  }
+
+  .plan-c {
+    background-image: url("../ims/wispPlanC.png");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+  }
+
+
+  /* Style the footer */ 
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 157, 255, 0.971);
+    color: white;
+  }
