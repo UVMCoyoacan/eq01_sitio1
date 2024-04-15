@@ -1,22 +1,27 @@
-const carousel = document.querySelector('.carousel');
-const carouselInner = document.querySelector('.carousel-inner');
-const carouselPrev = document.querySelector('.carousel-control-prev');
-const carouselNext = document.querySelector('.carousel-control-next');
+'use strict'
 
-let currentSlide = 0;
+const grande    = document.querySelector('.grande')
+const punto     = document.querySelectorAll('.punto')
 
-carouselPrev.addEventListener('click', () => {
-  currentSlide--;
-  if (currentSlide < 0) {
-    currentSlide = carouselInner.children.length - 1;
-  }
-  carouselInner.style.transform = `translateX(-${currentSlide * 20}%)`;
-});
+punto.forEach( ( cadaPunto , i )=> {
+    
+    punto[i].addEventListener('click',()=>{
 
-carouselNext.addEventListener('click', () => {
-  currentSlide++;
-  if (currentSlide >= carouselInner.children.length) {
-    currentSlide = 0;
-  }
-  carouselInner.style.transform = `translateX(-${currentSlide * 20}%)`;
-});
+        
+        let posicion  = i
+        
+        let operacion = posicion * -50
+
+        
+        grande.style.transform = `translateX(${ operacion }%)`
+
+        
+        punto.forEach( ( cadaPunto , i )=>{
+            
+            punto[i].classList.remove('activo')
+        })
+        
+        punto[i].classList.add('activo')
+
+    })
+})
