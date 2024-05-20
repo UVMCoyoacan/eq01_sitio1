@@ -185,10 +185,16 @@ footer {
   color: #ffd700;
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  text-shadow: #333;
+  text-shadow: #000000;
 }
 
 #Caracteristicas img {
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+#p1 {
+  height: auto;
   border-radius: 10px;
 }
 
