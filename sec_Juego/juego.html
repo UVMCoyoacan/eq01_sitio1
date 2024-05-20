@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Score Generator</title>
+  <link rel="stylesheet" href="../estilos/styles_Juego.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js" crossorigin></script>
+  <script>
+    // Componente de la barra de navegación
+    function Navbar(props) {
+      const { items } = props;
+
+      return (
+        React.createElement('nav', null,
+          React.createElement('ul', null,
+            items.map((item, index) =>
+              React.createElement('li', { key: index },
+                React.createElement('a', { href: item.href }, item.text)
+              )
+            )
+          )
+        )
+      );
+    }
+
+    // Componente del header
+    function Header(props) {
+      const { logoSrc, navItems } = props;
+
+      return (
+        React.createElement('header', null,
+          React.createElement('div', { className: 'logo' },
+            React.createElement('a', { href: './index.html' },
+              React.createElement('img', { src: logoSrc })
+            )
+          ),
+          React.createElement(Navbar, { items: navItems }) // Incluir la barra de navegación y pasarle las props navItems
+        )
+      );
+    }
+
+    // Componente del footer
+    function Footer(properties) {
+      const { copyright } = properties;
+
+      return (
+        React.createElement('footer', null,
+          React.createElement('p', null, copyright)
+        )
+      );
+    }
+
+    // Componente principal de la aplicación
+    function RandomScoreGenerator() {
+      const [peso, setPeso] = React.useState('');
+      const [score, setScore] = React.useState(0);
+      const [operation, setOperation] = React.useState('');
+
+      const generateRandomNumber = () => {
+        if (!peso || isNaN(peso)) {
+          alert('Por favor, ingresa un peso válido en kilos.');
+          return;
+        }
+
+        const randomNumber = Math.random() * 2.5 - 1;
+        const puntajeFloat = peso * randomNumber;
+        const roundedNumber = Math.round(puntajeFloat);
+        setScore(roundedNumber);
+        setOperation(`${peso} x ${randomNumber.toFixed(2)}`);
+      };
+
+      const handleInputChange = (event) => {
+        setPeso(event.target.value);
+      };
+
+      const inputElement = React.createElement('input', { type: 'number', placeholder: 'Enter weight in kg', value: peso, onChange: handleInputChange });
+      const buttonElement = React.createElement('button', { onClick: generateRandomNumber }, 'Generate Score');
+      const scoreElement = React.createElement('p', null, 'Your score is: ', score);
+      const operationElement = React.createElement('p', null, 'Operation: ', operation);
+
+      const logoSrc = '../ims/logo_main.png'; // Ruta de la imagen del logo
+      const navItems = [ // Elementos de la barra de navegación
+        { href: '../sec_Wisp/wisp.html', text: 'WISP' },
+        { href: '../sec_Nuup/nuup.html', text: 'NUUP' },
+        { href: '../sec_Cotizacion/cotizacion.html', text: 'Cotización' },
+        { href: '#', text: 'Juego' }
+      ];
+
+      const copyrightText = '\u00A9 2024 WipsKonet. Todos los derechos reservados.';
+
+      return (
+        React.createElement('div', null,
+          React.createElement(Header, { logoSrc: logoSrc, navItems: navItems }),
+          React.createElement('main', null,
+            inputElement,
+            buttonElement,
+            scoreElement,
+            operationElement
+          ),
+          React.createElement(Footer, { copyright: copyrightText }) // Incluir el footer y pasar los parámetros
+        )
+      );
+    }
+
+    ReactDOM.render(React.createElement(RandomScoreGenerator), document.getElementById('root'));
+  </script>
+</body>
+</html>

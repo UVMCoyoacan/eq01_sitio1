@@ -1,0 +1,59 @@
+body {
+    background-color: rgba(255, 255, 255, 0.5);
+    
+  }
+  
+  header {
+    background-color: rgba(255, 255, 255, 0.750);
+    color: #fff;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+  }
+  
+  /* Estilo para el logo */
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Estilo para la barra de navegación */
+  nav {
+    display: flex;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+  }
+  
+  nav a:hover {
+    color: #007bff;
+  }
+
+  footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 157, 255, 0.971);
+    color: white;
+  }
+
+  

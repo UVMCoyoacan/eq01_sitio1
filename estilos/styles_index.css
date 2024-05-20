@@ -1,106 +1,128 @@
-/* Set the background color of the page */
 body{
-    background-image: url("../ims/fondo_main.png");
-    background-color: rgba(255, 255, 255, 0.5);
+  background-image: url("../ims/s-3.jpg");
+  background-color: rgba(255, 255, 255, 0.5);
+  background-size: 100%;
 }
-  
-  /* Style the header */
-  header {
-    background-color: #FFD700;
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    align-content: center;
-  }
 
-  /* Style the logo */
-  .logo {
-    width: 100px;
-    height: auto;
-  }
-  
-  /* Style the nav */
-  nav {
-    display: flex;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    margin-right: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-  }
-
-  nav a:hover {
-    color: #007bff;
+/* Style the header */
+header {
+  background-color: rgba(255, 255, 255, 0.750);
+  color: #fff;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  align-content: center;
 }
-  
-  /* Style the main section */
-  .box-section {
-    display: flex;
-    justify-content: space-around;
-    padding: 2rem 0;
-  }
-  
-  .box {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px #ccc;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    animation: fade-in 2s forwards;
-  }
-  
-  .box-image{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
+
+/* Style the logo */
+.logo {
+  width: 100px;
+  height: auto;
+
+}
+
+/* Style the nav */
+nav {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* Style the main section */
+.box-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+.box {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 5px;
+  border-radius: 3%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: fade-in 2s forwards;
+}
+
+.box-image{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 3%;
+}
+
+.box h2 {
+  background-color: #ffffff00;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #00000000;
+  opacity: 70%;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes fade-in {
+      from {
+      opacity: 0;
+      }
+      to {
+      opacity: 1;
+      }
   }
 
-  .box h2 {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px #ccc;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+  .box.animate {
+    animation: fade-in 1s forwards;
   }
 
-  @keyframes fade-in {
-        from {
-        opacity: 0;
-        }
-        to {
-        opacity: 1;
-        }
-    }
+/* Style the footer */
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 157, 255, 0.971);
+  color: white;
+}
 
-    .box.animate {
-      animation: fade-in 1s forwards;
-    }
+#text {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
 
-  /* Style the footer */
-  footer {
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background-color: rgba(0, 157, 255, 0.971);
-    color: white;
-  }
+#text h1 {
+  font-size: 4rem;
+  color: #FFD700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+#text h2 {
+  font-size: 3rem;
+  color: #FFD700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
