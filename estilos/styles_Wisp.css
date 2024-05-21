@@ -149,6 +149,7 @@ nav a:hover {
   align-items: center;
   height: 300px;
   width: 100%;
+  padding: 2rem;
 }
 
 .publicidad img {
@@ -156,9 +157,10 @@ nav a:hover {
   margin: 0 auto;
   width: 70%;
   height: auto;
+  padding: 2rem;
+  border-radius: 50px;
 }
 
-/* Style the footer */
 footer {
   text-align: center;
   position: fixed;
@@ -169,40 +171,12 @@ footer {
   color: white;
 }
 
-/* Resto de tu CSS... */
-
-#Caracteristicas {
-  text-align: center;
-  color: #ffd700;
-  background-color: rgba(255, 255, 255, 0); /* Transparent background */
-  padding: 2rem;
-  border-radius: 20%;
-  margin: 2rem auto;
-  width: 80%;
-}
-
-#Caracteristicas h1 {
-  color: #ffd700;
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  text-shadow: #000000;
-}
-
-#Caracteristicas img {
-  border-radius: 10px;
-  padding: 2rem;
-}
-
-#p1 {
-  height: auto;
-  border-radius: 10px;
-}
-
 #Caracteristicas .grid {
   display: flex;
   justify-content: space-around;
-  flex-wrap: nowrap; /* Ensure all items are on the same line */
+  flex-wrap: nowrap;
 }
 
-
-
+.publicidad caract {
+  border-radius: 10px;
+}
